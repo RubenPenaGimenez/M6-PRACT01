@@ -1,0 +1,55 @@
+#tituloArt {
+  background-color: black;
+}
+
+.row {
+  margin: 1%;
+}
+
+section {
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  scroll-snap-align: start;
+}
+
+#contenedor {
+  scroll-snap-type: y mandatory;
+  overflow-y: scroll;
+  height: 100vh;
+}
+
+.one {
+  display: flex;
+  background-image: url(https://i.pinimg.com/564x/d7/fe/d4/d7fed4c463c50d1c08ab7304ab79f88d.jpg);
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  background-color: #669999;
+}
+
+.second {
+  background: linear-gradient(45deg, #930000, #500000, #ff0000, #fd5d00, #fff700, #c45200);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+#textoIni {
+  font-size: 20px;
+}

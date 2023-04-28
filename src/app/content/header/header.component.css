@@ -1,0 +1,29 @@
+#cabecera {
+  background-color: rgb(0, 0, 0);
+  margin: 10px;
+  padding: 10px;
+  width: 100%;
+  color: antiquewhite;
+  position: sticky;
+  top: 20px;
+}
+
+#container {
+  display: flex;
+}
+
+#botones {
+  margin:2%;
+  width: 15%;
+  background-color: #780000;
+  color: antiquewhite;
+  border: thick double white;
+} #botones:hover {
+  background-color: red;
+  font-weight: bolder;
+}
+
+p {
+  margin-top: 1.4%;
+  margin-left: 41%;
+}

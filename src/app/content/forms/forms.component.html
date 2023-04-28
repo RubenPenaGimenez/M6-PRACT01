@@ -1,0 +1,122 @@
+<main id="formulario" class="border border-3 border-danger rounded rounded-3">
+
+    <form [formGroup]="Form" (ngSubmit)="Clic(Form.value)">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text bg-danger">Id Artista</span>
+            </div>
+            <input type="text" class="form-control border border-3 border-danger rounded rounded-3" name="idArtista"
+                formControlName="idArtista">
+        </div>
+        <div *ngIf="idArtista.value == ''" class="alert alert-danger">Arrequetonaaa pon el numero de tu ID no? 😜</div>
+        <div *ngIf="idArtista.errors?.['pattern']" class="alert alert-danger">Que eres tont@ y no sabes que no hay ID con letras o que? 👿</div>
+        <div *ngIf="idArtista.errors?.['min']" class="alert alert-danger">Por favor, como mínimo 2 dígitos</div>
+
+        &nbsp;
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text bg-danger">Nombre</span>
+            </div>
+            <input type="text" class="form-control border border-3 border-danger rounded rounded-3" name="nombreArtista"
+                formControlName="nombreArtista">
+        </div>
+        <div *ngIf="nombreArtista.value== ''" class="alert alert-danger">Introduce tu nombre majo/a porfavor 😜</div>
+        <div *ngIf="nombreArtista.errors?.['pattern'] " class="alert alert-danger">Que eres tont@ y no sabes que no hay Nombres con números o que? 👿</div>
+
+        &nbsp;
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text bg-danger">Nombre AKA</span>
+            </div>
+            <input type="text" class="form-control border border-3 border-danger rounded rounded-3" name="nombreAKA"
+                formControlName="nombreAKA">
+        </div>
+        <div *ngIf="nombreAKA.errors?.['required']" class="alert alert-danger">Pon el como quieres que te llame anda bob@ 👿😜</div>
+        <div *ngIf="nombreAKA.errors?.['pattern'] " class="alert alert-danger">Que eres tont@ y no sabes que no hay NombresAKA con números o que? 👿</div>
+
+        &nbsp;
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text bg-danger">Fecha de Registro</span>
+            </div>
+            <input type="date" class="form-control border border-3 border-danger rounded rounded-3"
+                name="fechaDeRegistro" formControlName="fechaDeRegistro">
+        </div>
+        <div *ngIf="fechaDeRegistro.errors?.['required']" class="alert alert-danger">Venga va dime que día vas registarte en mi agenda de contactos guap@ 😜</div>
+
+        &nbsp;
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text bg-danger">Estilo Musical</span>
+            </div>
+            <select class="form-control text-muted border border-3 border-danger rounded rounded-3"
+                formControlName="estiloMusical" #musica>
+                <option value="Rap">Rap</option>
+                <option value="Trap">Trap</option>
+                <option value="Reggaetón">Reggaetón</option>
+                <option value="Hyperpop">Hyperpop</option>
+                <option value="Pop">Pop</option>
+                <option value="Drill">Drill</option>
+            </select>
+        </div>
+        <div *ngIf="estiloMusical.errors?.['customMus']" class="alert alert-success">Rap</div>
+        <div *ngIf="estiloMusical.errors?.['required']" class="alert alert-danger">Introduce tu estilo de música favorito 🧐</div>
+        <div *ngIf="estiloMusical.value == 'Rap'" class="alert alert-info">Con que te gusta Kase.O, a mi también lo escuchamos juntos si quieres ? 😉</div>
+        <div *ngIf="estiloMusical.value == 'Trap'" class="alert alert-info">Con que te gusta Drake, a mi también lo escuchamos juntos si quieres ? 😉</div>
+        <div *ngIf="estiloMusical.value == 'Reggaetón'" class="alert alert-info">Con que te gusta Bad Bunny, a mi también lo escuchamos juntos si quieres ? 😉</div>
+        <div *ngIf="estiloMusical.value == 'Hyperpop'" class="alert alert-info">Con que te gusta MDA, a mi también lo escuchamos juntos si quieres ? 😉</div>
+        <div *ngIf="estiloMusical.value == 'Pop'" class="alert alert-info">Con que te gusta The Weeknd, a mi también lo escuchamos juntos si quieres ? 😉</div>
+        <div *ngIf="estiloMusical.value == 'Drill'" class="alert alert-info">Con que te gusta Pop Smoke, a mi también lo escuchamos juntos si quieres ? 😉</div>
+
+        &nbsp;
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text bg-danger">Correo</span>
+            </div>
+            <input type="email" class="form-control border border-3 border-danger rounded rounded-3" name="correo"
+                formControlName="correo">
+        </div>
+        <div *ngIf="correo.value == ''" class="alert alert-danger">Crack, te falta introducir el correo para poder enviarme a domicilio 😜</div>
+        <div *ngIf="correo.errors?.['pattern']" class="alert alert-danger">Maquinita, y el @ y el .com o .es?</div>
+
+        &nbsp;
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text bg-danger">Teléfono</span>
+            </div>
+            <input type="text" class="form-control border border-3 border-danger rounded rounded-3" name="Telefono"
+                formControlName="telefono">
+        </div>
+        <div *ngIf="telefono.value == ''" class="alert alert-danger">Me llamo Rxb3N, pero tu puedes llamarme esta noche introduciendo tu número de teléfono aquí 😏</div>
+        <div *ngIf="telefono.errors?.['pattern']" class="alert alert-danger">Que eres tont@ y no sabes que no hay telefónos con letras o que? 👿</div>
+        &nbsp;
+
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text bg-danger">Mensaje</span>
+            </div>
+            <input type="text" class="form-control border border-3 border-danger rounded rounded-3" name="Mensaje"
+                formControlName="mensaje">
+        </div>
+        <div *ngIf="mensaje.value == ''" class="alert alert-danger">Si quieres piropearme para que entrar si o si en mi discográfica adelante 🙄</div>
+        <div *ngIf="mensaje.errors?.['pattern']" class="alert alert-danger">Champion aquí a pura letra nada de números</div>
+
+        &nbsp;
+
+        <div class="form-check">
+            <label class="form-check-label">Confirmo que tengo más de 18 años.</label>
+            <input class="form-check-input border border-3 border-danger rounded rounded-3 bg-danger" type="checkBox"
+                name="aceptarTerminos" formControlName="aceptarTerminos">
+        </div>
+        <div *ngIf="aceptarTerminos.value == ''" class="alert alert-danger">Porfavor, si no tienes 18 eso es cárcel NONONO!! ⛓️</div>
+
+        <br>
+        <button type="submit" [disabled]="Form.invalid" id="boton" class="bg-danger border border-3 border-dark rounded rounded-3">Firmar</button>
+    </form>
+</main>

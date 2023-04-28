@@ -1,0 +1,14 @@
+#formulario {
+    margin: 1rem;
+    background-color: lightgrey;
+    padding: 1rem;
+    height: auto;
+}
+
+form {
+    margin-top: 2rem;
+}
+
+#boton {
+    width: 100%;
+}

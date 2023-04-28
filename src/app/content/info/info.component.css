@@ -1,0 +1,28 @@
+#infoDiv {
+    background-color: #D3D3D3;
+    border: 3px solid #dc3545;
+    border-radius: 3px;
+    padding: 10px;
+    margin-bottom: 20px;
+    margin: 1%;
+}
+
+.tbl1 {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.tbl1 th, .tbl1 td {
+    padding: 8px;
+    text-align: left;
+    border: 1px solid #ddd;
+}
+
+@media (max-width: 600px) {
+    .tbl1 {
+        font-size: 14px;
+    }
+    .tbl1 th, .tbl1 td {
+        padding: 5px;
+    }
+}

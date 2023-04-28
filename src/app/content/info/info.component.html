@@ -1,0 +1,35 @@
+<div id="infoDiv" class="border border-3 border-danger rounded rounded-3">
+
+    
+
+    <table class="tbl1">
+        <thead>
+            <tr>
+                <th class="text text-center bg-danger rounded rounded-3 border border-3 border-dark">Id Artista</th>
+                <th class="text text-center bg-danger rounded rounded-3 border border-3 border-dark">Nombre Artista</th>
+                <th class="text text-center bg-danger rounded rounded-3 border border-3 border-dark">Nombre AKA</th>
+                <th class="text text-center bg-danger rounded rounded-3 border border-3 border-dark">Fecha de registro</th>
+                <th class="text text-center bg-danger rounded rounded-3 border border-3 border-dark">estiloMusical</th>
+                <th class="text text-center bg-danger rounded rounded-3 border border-3 border-dark">correo</th>
+                <th class="text text-center bg-danger rounded rounded-3 border border-3 border-dark">telefono</th>
+                <th class="text text-center bg-danger rounded rounded-3 border border-3 border-dark">mensaje</th>
+                <th class="text text-center bg-danger rounded rounded-3 border border-3 border-dark">mayor de edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            <ng-container *ngFor="let artist of artistas">
+                <tr>
+                    <td class="text text-center bg-light rounded rounded-3">{{artist.idArtista}}</td>
+                    <td class="text text-center bg-light rounded rounded-3">{{artist.nombreArtista}}</td>
+                    <td class="text text-center bg-light rounded rounded-3">{{artist.nombreAKA}}</td>
+                    <td class="text text-center bg-light rounded rounded-3">{{artist.fechaDeRegistro}}</td>
+                    <td class="text text-center bg-light rounded rounded-3">{{artist.estiloMusical}}</td>
+                    <td class="text text-center bg-light rounded rounded-3">{{artist.correo}}</td>
+                    <td class="text text-center bg-light rounded rounded-3">{{artist.telefono}}</td>
+                    <td class="text text-center bg-light rounded rounded-3">{{artist.mensaje}}</td>
+                    <td class="text text-center bg-light rounded rounded-3">{{artist.aceptarTerminos}}</td>
+                </tr>
+            </ng-container>
+        </tbody>
+    </table>
+</div>
